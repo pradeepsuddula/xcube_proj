@@ -1,0 +1,23 @@
+﻿<Application x:Class="xcube_proj.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:xcube_proj"
+             xmlns:views="clr-namespace:xcube_proj.Views"
+             StartupUri="Shelf.xaml"
+             xmlns:vm="clr-namespace:xcube_proj.ViewModel">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type vm:AddUserViewModel}">
+            <views:AddUserView />
+        </DataTemplate>
+
+        <!-- DataTemplate for AllUsersViewModel -->
+        <DataTemplate DataType="{x:Type vm:AllUsersViewModel}">
+            <views:AlUsersView />
+        </DataTemplate>
+
+        <!-- DataTemplate for MapViewModel -->
+        <DataTemplate DataType="{x:Type vm:MapViewModel}">
+            <views:MapView />
+        </DataTemplate>
+    </Application.Resources>
+</Application>
